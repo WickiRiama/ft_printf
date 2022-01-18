@@ -6,7 +6,7 @@
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 10:39:40 by mriant            #+#    #+#             */
-/*   Updated: 2022/01/11 18:02:45 by mriant           ###   ########.fr       */
+/*   Updated: 2022/01/18 16:06:33 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,13 @@ int ft_printf(const char *s, ...)
             if (s[i + 1] == 'p')
                 total += ft_putpoint((intptr_t) va_arg(ap, void *));
             if (s[i + 1] == 'u')
-                total += ft_putuint(va_arg(ap, unsigned int));    
+                total += ft_putuint(va_arg(ap, unsigned int));
+            if (s[i + 1] == 'x')
+                total += ft_putx(va_arg(ap, unsigned int));
+            if (s[i + 1] == 'X')
+                total += ft_putX(va_arg(ap, unsigned int));
+            if (s[i + 1] == 'X')
+                total += ft_putchar_int('%');
             i += 2;
         }
         else

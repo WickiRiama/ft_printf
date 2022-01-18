@@ -6,14 +6,15 @@
 #    By: mriant <mriant@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/07 11:10:18 by mriant            #+#    #+#              #
-#    Updated: 2022/01/18 14:37:42 by mriant           ###   ########.fr        #
+#    Updated: 2022/01/18 16:00:16 by mriant           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
 SRCS = ft_printf.c \
-	ft_printnbr.c \
+	ft_printint.c \
+	ft_printuint.c \
 	ft_printstr.c
 
 OBJS = ${SRCS:%.c=%.o}

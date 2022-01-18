@@ -6,7 +6,7 @@
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 10:59:55 by mriant            #+#    #+#             */
-/*   Updated: 2022/01/07 11:00:33 by mriant           ###   ########.fr       */
+/*   Updated: 2022/01/18 16:32:45 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ int ft_putstr_int(char *s)
 {
     int result;
 
-    result = write(1, s, ft_strlen(s));
+    if (!s)
+        result = write(1, "(null)", 6);
+    else
+        result = write(1, s, ft_strlen(s));
     return (result);
 }
