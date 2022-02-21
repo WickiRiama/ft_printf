@@ -7,3 +7,4 @@ main.c
 */*.out
 */*.o
 */*.d
+printfTester
